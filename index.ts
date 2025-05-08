@@ -7,9 +7,9 @@ function formatString(input:string, toUpper?:boolean):string{
     }
 }
 
-// const result1 = formatString('hello');
-// const result2 = formatString('hello',true);
-// const result3 = formatString('hello',false);
+const result1 = formatString('hello');
+const result2 = formatString('hello',true);
+const result3 = formatString('hello',false);
 // console.log(result3);
 
 type Book ={
@@ -31,8 +31,8 @@ const books :Book[] = [
     { title: "Book F", rating: 5.0 },
   ];
 
-//   const result = filterByRatting(books);
-//   console.log(result);
+  const result4 = filterByRatting(books);
+//   console.log(result4);
 
 
 function concatenateArrays<T>(...arrays : T[][]):T[]{
@@ -43,15 +43,15 @@ function concatenateArrays<T>(...arrays : T[][]):T[]{
     return result;
 }
 
-// const arrayOfLetter1 = ['a','b'];
-// const arrayOfLetter2 = ['c'];
-// const result1 = concatenateArrays(arrayOfLetter1,arrayOfLetter2)
-// console.log(result1);
+const arrayOfLetter1 = ['a','b'];
+const arrayOfLetter2 = ['c'];
+const result5 = concatenateArrays(arrayOfLetter1,arrayOfLetter2)
+// console.log(result5);
 
-// const arrayOfNumber1 = [1,2,3,4];
-// const arrayOfNumber2 = [5,6,7,8,9];
-// const result2 = concatenateArrays(arrayOfNumber1,arrayOfNumber2)
-// console.log(result2);
+const arrayOfNumber1 = [1,2,3,4];
+const arrayOfNumber2 = [5,6,7,8,9];
+const result6 = concatenateArrays(arrayOfNumber1,arrayOfNumber2)
+// console.log(result6);
 
 class Vehicle{
    private _make:string;
@@ -90,9 +90,29 @@ function processValue(value : string | number) : number{
     return typeof value === 'string' ? value.length : value * 2;
     
 }
-// const test1 = processValue('hello');
-// const test2 = processValue(10);
+const test1 = processValue('hello');
+const test2 = processValue(10);
 // console.log(test1);
+
+interface Product{
+    name:string;
+    price:number;
+};
+
+function getMostExpensiveProduct(products: Product[]) : Product | null{
+    if(products.length === 0) return null;
+    return products.reduce((acc,curr) => curr.price > acc.price ? curr : acc);
+}
+
+const products1 :Product[] = [
+    { name: "Pen", price: 10 },
+    { name: "Notebook", price: 25 },
+    { name: "Bag", price: 50 }
+  ];
+  const products2 : Product[] = []
+
+  const result7 = getMostExpensiveProduct(products1);
+//   console.log(result7);
 
 
 
