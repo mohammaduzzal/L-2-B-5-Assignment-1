@@ -116,4 +116,34 @@ const products1 :Product[] = [
 
 
 
+enum Day{
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+};
+
+function getDayType(day : Day) : string{
+    switch(day){
+        case Day.Monday:
+        case Day.Tuesday:
+        case Day.Wednesday:
+        case Day.Thursday:
+        case Day.Friday:
+            return "Weekday";
+        case Day.Saturday:
+        case Day.Sunday:
+            return "Weekend";
+        
+    }
+
+};
+
+// console.log(getDayType(Day.Sunday));
+
+
+
 
