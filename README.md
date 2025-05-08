@@ -52,8 +52,8 @@ In TypeScript, interfaces and types are both used to define the shape of data, b
 
 
 # the use of the `keyof` keyword in TypeScript 
+    keyof extracts keys of an object type as a union of string literals.Ensure that only valid keys of an object are used.Combine with other TypeScript features like mapped types to transform or constrain types.keyof boosts reusability and type safety.
 
-    `keyof` extracts keys of an object type as a union of string literals.Ensure that only valid keys of an object are used.Combine with other TypeScript features like mapped types to transform or constrain types.keyof boosts reusability and type safety.
 
  ### Example : 
            type User = {
