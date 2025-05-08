@@ -33,3 +33,22 @@ const books :Book[] = [
 
 //   const result = filterByRatting(books);
 //   console.log(result);
+
+
+function concatenateArrays<T>(...arrays : T[][]):T[]{
+    const result : T[] = [];
+    for(const array of arrays){
+        result.push(...array)
+    }
+    return result;
+}
+
+// const arrayOfLetter1 = ['a','b'];
+// const arrayOfLetter2 = ['c'];
+// const result1 = concatenateArrays(arrayOfLetter1,arrayOfLetter2)
+// console.log(result1);
+
+// const arrayOfNumber1 = [1,2,3,4];
+// const arrayOfNumber2 = [5,6,7,8,9];
+// const result2 = concatenateArrays(arrayOfNumber1,arrayOfNumber2)
+// console.log(result2);
