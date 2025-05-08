@@ -43,6 +43,43 @@ In TypeScript, interfaces and types are both used to define the shape of data, b
             Primitive types: type Id = string;
             Union types: type Status = "success" | "error";
             Intersection types: type Combined = TypeA & TypeB;
-            Complex types: type Func = (x: number) => string;      
- 
+            Complex types: type Func = (x: number) => string; 
+
+
+ ###  When to Use What?
+        Use interface for object-oriented/class-based code.
+        Use type for unions, intersections, and primitives.
+
+
+# the use of the `keyof` keyword in TypeScript 
+
+    `keyof` extracts keys of an object type as a union of string literals.Ensure that only valid keys of an object are used.Combine with other TypeScript features like mapped types to transform or constrain types.keyof boosts reusability and type safety.
+
+ ### Example : 
+           type User = {
+                   name: string;
+                   age: number;
+                   isAdmin: boolean;
+                  };
+
+            type UserKeys = keyof User;  // 'name' | 'age' | 'isAdmin'
+
+
+
+
+            function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+                            return obj[key];
+                                }
+
+                    const user: User = {
+                              name: "Bright",
+                              age: 25,
+                              isAdmin: false,
+                                   };
+
+                      const username = getProperty(user, "name"); // Bright
+                      const isUserAdmin = getProperty(user, "isAdmin"); // false
+
+           
+         
 
