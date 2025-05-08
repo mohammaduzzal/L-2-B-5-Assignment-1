@@ -85,3 +85,15 @@ const myCar = new Car("Toyota", 2011,"Corolla");
 // myCar.getModel();
 
 
+
+function processValue(value : string | number) : number{
+    return typeof value === 'string' ? value.length : value * 2;
+    
+}
+// const test1 = processValue('hello');
+// const test2 = processValue(10);
+// console.log(test1);
+
+
+
+
